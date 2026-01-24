@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis • Adaptive ML System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="glass-card">
+    <h1>💬 Sentiment Analyzer</h1>
+    <p class="tagline">Adaptive ML • Drift-Aware • Self-Learning</p>
+    
+    <!-- System Information Panel -->
+    {% if system_info %}
+    <div class="system-info">
+        <div class="info-row">
+            <span class="info-label">Model Version:</span>
+            <span class="info-value">v{{ system_info.model_version }}</span>
+        </div>
+        {% if system_info.model_name %}
+        <div class="info-row">
+            <span class="info-label">Algorithm:</span>
+            <span class="info-value">{{ system_info.model_name }}</span>
+        </div>
+        {% endif %}
+        {% if system_info.accuracy %}
+        <div class="info-row">
+            <span class="info-label">Accuracy:</span>
+            <span class="info-value">{{ "%.2f"|format(system_info.accuracy * 100) }}%</span>
+        </div>
+        {% endif %}
+        {% if system_info.drift_score is not none %}
+        <div class="info-row">
+            <span class="info-label">Last Drift Score:</span>
+            <span class="info-value drift-{{ 'high' if system_info.drift_score > 0.3 else 'low' }}">
+                {{ "%.3f"|format(system_info.drift_score) }}
+            </span>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <!-- Prediction Form -->
+    <form method="POST" action="{{ url_for('predict') }}">
+        <textarea 
+            name="text_input" 
+            placeholder="Type your sentence here..." 
+            required>{{ input_text | default('') }}</textarea>
+        
+        <div class="self-learning-option">
+            <label>
+                <input type="checkbox" name="enable_self_learning" value="true">
+                Enable self-learning (high-confidence predictions will be added to training data)
+            </label>
+        </div>
+        
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+    
+    <!-- Error Display -->
+    {% if error %}
+    <div class="error-card">
+        <p>⚠️ {{ error }}</p>
+    </div>
+    {% endif %}
+    
+    <!-- Prediction Results -->
+    {% if prediction %}
+    <div class="result-card">
+        <p class="label">Prediction</p>
+        <h2>{{ prediction }}</h2>
+        
+        {% if confidence is defined %}
+        <div class="confidence-info">
+            <p class="confidence-label">Confidence:</p>
+            <div class="confidence-bar">
+                <div class="confidence-fill" style="width: {{ (confidence * 100)|int }}%"></div>
+            </div>
+            <span class="confidence-value">{{ "%.1f"|format(confidence * 100) }}%</span>
+        </div>
+        
+        {% if high_confidence %}
+        <p class="high-confidence-badge">✓ High Confidence - Suitable for self-learning</p>
+        {% else %}
+        <p class="low-confidence-badge">⚠ Low Confidence - Not added to training</p>
+        {% endif %}
+        {% endif %}
+        
+        {% if model %}
+        <p class="model">
+            Model: <span>{{ model }}</span>
+        </p>
+        {% endif %}
+        
+        {% if self_learning_enabled and high_confidence %}
+        <p class="self-learning-success">✓ Sample added to training data</p>
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <!-- Research Mode Indicator -->
+    <footer>
+        <p>🔬 Research Mode: Active | ⚙️ Continuous Learning: Enabled</p>
+        <p class="footer-small">Drift Detection • Model Versioning • Confidence Filtering</p>
+    </footer>
+</div>
+
+</body>
+</html>
