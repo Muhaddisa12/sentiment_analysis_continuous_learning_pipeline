@@ -2,13 +2,13 @@
 
 This document describes the API endpoints and usage for the Self-Training Sentiment Analysis System.
 
-## 🌐 Base URL
+##  Base URL
 
 ```
 http://localhost:5000
 ```
 
-## 📋 Endpoints
+##  Endpoints
 
 ### 1. Home Page
 
@@ -359,7 +359,7 @@ drift_history = tracker.get_drift_history(limit=50)
 
 ---
 
-## 🔐 Authentication
+##  Authentication
 
 Currently, the API does not require authentication. For production deployments, consider:
 
@@ -368,7 +368,7 @@ Currently, the API does not require authentication. For production deployments, 
 3. OAuth 2.0
 4. Rate limiting
 
-## ⚠️ Error Handling
+##  Error Handling
 
 ### HTTP Status Codes
 
@@ -384,7 +384,7 @@ Currently, the API does not require authentication. For production deployments, 
 }
 ```
 
-## 📊 Rate Limiting
+##  Rate Limiting
 
 Currently no rate limiting is implemented. For production, consider:
 
@@ -392,7 +392,7 @@ Currently no rate limiting is implemented. For production, consider:
 - Per-user rate limiting
 - Request throttling
 
-## 🔄 Webhooks (Future)
+##  Webhooks (Future)
 
 Potential webhook events:
 - Model training completed
@@ -400,7 +400,7 @@ Potential webhook events:
 - Model deployed
 - Model rolled back
 
-## 📝 Examples
+##  Examples
 
 ### Complete Prediction Workflow
 
@@ -444,7 +444,7 @@ else:
     print("No significant drift, model unchanged")
 ```
 
-## 🧪 Testing the API
+##  Testing the API
 
 ### Using curl
 
@@ -475,7 +475,7 @@ response = requests.post(
 print(response.text)  # HTML response
 ```
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [REST API Best Practices](https://restfulapi.net/)
