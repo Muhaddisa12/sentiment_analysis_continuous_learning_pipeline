@@ -2,14 +2,14 @@
 
 This guide covers deploying the Self-Training Sentiment Analysis System to various environments.
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Python 3.8 or higher
 - MySQL 5.7+ or MySQL 8.0+
 - 2GB+ RAM (4GB+ recommended)
 - 10GB+ disk space for models and logs
 
-## 🚀 Local Development Deployment
+##  Local Development Deployment
 
 ### Step 1: Clone Repository
 
@@ -85,7 +85,7 @@ python scheduler.py
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Dockerfile
 
@@ -186,7 +186,7 @@ docker-compose down
 
 ---
 
-## ☁️ Production Deployment
+##  Production Deployment
 
 ### Option 1: Gunicorn + Nginx
 
@@ -329,7 +329,7 @@ gcloud run deploy sentiment-analysis \
 
 ---
 
-## 🔒 Security Considerations
+##  Security Considerations
 
 ### 1. Environment Variables
 
@@ -387,7 +387,7 @@ sudo ufw enable
 
 ---
 
-## 📊 Monitoring
+##  Monitoring
 
 ### 1. Application Logs
 
@@ -423,7 +423,7 @@ SHOW STATUS;
 
 ---
 
-## 🔄 Backup Strategy
+##  Backup Strategy
 
 ### 1. Database Backups
 
@@ -469,7 +469,7 @@ Add to crontab:
 
 ---
 
-## 🔧 Maintenance
+##  Maintenance
 
 ### 1. Log Rotation
 
@@ -509,7 +509,7 @@ CHECK TABLE twitter_data;
 
 ---
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -546,7 +546,7 @@ LOG_LEVEL = "DEBUG"
 
 ---
 
-## 📈 Performance Optimization
+##  Performance Optimization
 
 1. **Caching**: Use Redis for model caching
 2. **Connection Pooling**: Database connection pooling
@@ -556,7 +556,7 @@ LOG_LEVEL = "DEBUG"
 
 ---
 
-## ✅ Deployment Checklist
+##  Deployment Checklist
 
 - [ ] Database configured and accessible
 - [ ] Environment variables set
@@ -571,7 +571,7 @@ LOG_LEVEL = "DEBUG"
 
 ---
 
-## 📞 Support
+##  Support
 
 For deployment issues:
 - Check logs: `logs/system.log`
