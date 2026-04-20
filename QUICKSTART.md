@@ -2,7 +2,7 @@
 
 Get up and running with the Self-Training Sentiment Analysis System in 5 minutes!
 
-## ⚡ Fast Setup
+##  Fast Setup
 
 ### 1. Prerequisites Check
 
@@ -53,7 +53,7 @@ python app.py
 
 Open browser: `http://localhost:5000`
 
-## 🧪 Test Without Database
+##  Test Without Database
 
 If you don't have MySQL set up yet, you can test the system:
 
@@ -61,7 +61,7 @@ If you don't have MySQL set up yet, you can test the system:
 2. **Load a pre-trained model** or create a simple test model
 3. **Test predictions** via the web interface
 
-## 📊 Basic Usage
+##  Basic Usage
 
 ### Web Interface
 
@@ -99,7 +99,7 @@ drift_info = detect_drift(
 print(f"Drift score: {drift_info['overall_drift_score']}")
 ```
 
-## 🗄️ Database Setup (Optional)
+##  Database Setup (Optional)
 
 ### Create Database
 
@@ -131,7 +131,7 @@ INSERT INTO twitter_data (clean_text, category) VALUES
 ('Not worth the money', 0);
 ```
 
-## 🚀 Next Steps
+##  Next Steps
 
 1. **Train Initial Model**:
    ```bash
@@ -154,7 +154,7 @@ INSERT INTO twitter_data (clean_text, category) VALUES
    - [API.md](API.md) - API reference
    - [DEPLOYMENT.md](DEPLOYMENT.md) - Production setup
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Import Errors
 
@@ -192,7 +192,7 @@ netstat -ano | findstr :5000  # Windows
 # Kill process or change port in app.py
 ```
 
-## 📖 Common Tasks
+##  Common Tasks
 
 ### View System Information
 
@@ -223,20 +223,20 @@ EXPERIMENT_MODE = True
 
 Metrics will be saved to `experiments/` directory.
 
-## 🎓 Learning Resources
+##  Learning Resources
 
 - **Drift Detection**: See `ml/drift.py` for implementation details
 - **Model Lifecycle**: See `utils/model_lifecycle.py` for versioning
 - **Training Pipeline**: See `ml/trainer.py` for training logic
 
-## 💡 Tips
+##  Tips
 
 1. **Start Simple**: Begin with basic predictions, then enable advanced features
 2. **Monitor Logs**: Check `logs/system.log` for system events
 3. **Experiment Mode**: Enable for research and analysis
 4. **Model Versions**: Check `models_store/metadata.json` for model history
 
-## 🆘 Need Help?
+##  Need Help?
 
 - Check [README.md](README.md) for detailed information
 - Review [ARCHITECTURE.md](ARCHITECTURE.md) for system understanding
