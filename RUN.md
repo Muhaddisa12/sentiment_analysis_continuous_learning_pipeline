@@ -1,6 +1,6 @@
 # How to Run the Application
 
-## 🚀 Quick Start (5 Minutes)
+##  Quick Start (5 Minutes)
 
 ### Step 1: Install Dependencies
 
@@ -148,7 +148,7 @@ or
 http://127.0.0.1:5000
 ```
 
-## 📝 Using the Application
+##  Using the Application
 
 1. **Enter text** in the textarea (e.g., "I love this product!")
 2. **Click "Analyze Sentiment"**
@@ -163,7 +163,7 @@ http://127.0.0.1:5000
 - High-confidence predictions will be added to training data
 - Requires database connection
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Error: "Model file not found"
 
@@ -213,7 +213,7 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-## 🎯 Common Commands
+##  Common Commands
 
 ```bash
 # Run the app
@@ -230,7 +230,7 @@ tail -f logs/system.log  # Linux/Mac
 type logs\system.log     # Windows
 ```
 
-## 📊 What You'll See
+##  What You'll See
 
 When you run the app, you'll see:
 
@@ -250,7 +250,7 @@ When you run the app, you'll see:
    - Confidence bar
    - Model information
 
-## 🚀 Next Steps
+##  Next Steps
 
 - **Enable scheduler** for automated retraining: `python scheduler.py`
 - **Check logs**: `logs/system.log`
