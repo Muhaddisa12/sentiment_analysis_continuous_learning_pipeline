@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Research](https://img.shields.io/badge/Research-CERN--Worthy-orange.svg)](https://home.cern/)
 
-### 🖼️ Screenshots
+###  Screenshots
 
 <div align="center">
   <img src="Interface.png" alt="User Interface" width="600"/>
@@ -18,7 +18,7 @@
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 - **[Quick Start](QUICKSTART.md)** - Get started in 5 minutes
 - **[Architecture](ARCHITECTURE.md)** - Detailed system architecture and design
@@ -29,7 +29,7 @@
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Traditional machine learning systems suffer from **model decay** when deployed in production. As data distributions shift over time (data drift) or the relationship between features and labels changes (concept drift), model performance degrades. This is particularly critical in:
 
@@ -47,7 +47,7 @@ This project addresses these challenges by implementing an **adaptive, drift-awa
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -98,7 +98,7 @@ This project addresses these challenges by implementing an **adaptive, drift-awa
 
 ---
 
-## 🔬 Research Motivation
+##  Research Motivation
 
 ### Why Drift Detection Matters
 
@@ -126,7 +126,7 @@ This system demonstrates these principles in a sentiment analysis context, but t
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 ### 1. **Drift Detection** (`ml/drift.py`)
 
@@ -202,7 +202,7 @@ The web interface displays:
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -239,7 +239,7 @@ python scheduler.py
 
 ---
 
-## 🧪 Usage
+##  Usage
 
 ### Basic Prediction
 
@@ -275,7 +275,7 @@ Set `EXPERIMENT_MODE = True` in `config.py` to enable:
 
 ---
 
-## 📊 Configuration
+##  Configuration
 
 Key configuration parameters in `config.py`:
 
@@ -298,7 +298,7 @@ EXPERIMENT_MODE = True  # Enable research tracking
 
 ---
 
-## 🔍 Project Structure
+##  Project Structure
 
 ```
 Setiment_analysis/
@@ -352,7 +352,7 @@ Setiment_analysis/
 
 ---
 
-## 🧪 Reproducing Experiments
+##  Reproducing Experiments
 
 ### 1. Enable Experiment Mode
 
@@ -381,7 +381,7 @@ The experiment data is structured for easy visualization:
 
 ---
 
-## 🔬 Research Contributions
+##  Research Contributions
 
 This system demonstrates:
 
@@ -392,7 +392,7 @@ This system demonstrates:
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Drift Detection Algorithm
 
@@ -432,7 +432,7 @@ This system demonstrates:
 
 ---
 
-## 🚧 Future Enhancements
+##  Future Enhancements
 
 - [ ] Real-time drift monitoring dashboard
 - [ ] Advanced drift detection methods (KS test, MMD)
@@ -444,19 +444,19 @@ This system demonstrates:
 
 ---
 
-## 📝 License
+##  License
 
 MIT License - See LICENSE file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 This project is designed to meet research-grade standards suitable for CERN OpenLab environments, demonstrating adaptive ML principles applicable to large-scale scientific data systems.
 
 ---
 
-## 📧 Contact
+##  Contact
 
 For questions or contributions, please open an issue or contact the development team.
 
