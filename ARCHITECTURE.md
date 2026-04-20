@@ -2,7 +2,7 @@
 
 This document provides a detailed technical overview of the Self-Training Sentiment Analysis System architecture.
 
-## 🏗️ High-Level Architecture
+##  High-Level Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -51,7 +51,7 @@ This document provides a detailed technical overview of the Self-Training Sentim
 └───────────────────────────────────────────────────────────────────────┘
 ```
 
-## 📦 Module Structure
+##  Module Structure
 
 ### 1. Presentation Layer
 
@@ -210,7 +210,7 @@ models_store/
 - MySQL connection management
 - Uses configuration from `config.py`
 
-## 🔄 Data Flow
+##  Data Flow
 
 ### Prediction Flow
 ```
@@ -235,7 +235,7 @@ Get Predictions → Compute Confidence Drift →
 Combine Scores → Return Result
 ```
 
-## 🔐 Configuration Management
+##  Configuration Management
 
 All configuration in `config.py`:
 - Database credentials
@@ -245,7 +245,7 @@ All configuration in `config.py`:
 - Experiment mode
 - Logging settings
 
-## 📊 State Management
+##  State Management
 
 ### Model State
 - Stored in `models_store/metadata.json`
@@ -262,7 +262,7 @@ All configuration in `config.py`:
 - Rotating logs (manual management)
 - Structured format
 
-## 🚀 Scalability Considerations
+##  Scalability Considerations
 
 ### Current Limitations
 - Single-threaded Flask app
@@ -276,14 +276,14 @@ All configuration in `config.py`:
 - Database connection pooling
 - Redis for model caching
 
-## 🔒 Security Considerations
+##  Security Considerations
 
 1. **Database Credentials**: Stored in config (should use environment variables in production)
 2. **Input Validation**: Text input sanitization
 3. **Error Handling**: No sensitive data in error messages
 4. **File Permissions**: Model files should be protected
 
-## 🧪 Testing Strategy
+##  Testing Strategy
 
 ### Unit Tests
 - Individual functions
@@ -300,7 +300,7 @@ All configuration in `config.py`:
 - Error scenarios
 - Performance tests
 
-## 📈 Monitoring & Observability
+##  Monitoring & Observability
 
 ### Logging
 - Structured logs
@@ -313,29 +313,9 @@ All configuration in `config.py`:
 - Drift score trends
 - Resource usage
 
-## 🔄 Deployment Architecture
 
-### Development
-```
-Local Machine → Flask Dev Server → Local MySQL
-```
 
-### Production (Recommended)
-```
-Load Balancer → Gunicorn Workers → 
-Application Servers → MySQL Database
-```
-
-### Containerized (Future)
-```
-Docker Compose:
-  - Flask App Container
-  - MySQL Container
-  - Redis Container (optional)
-  - Nginx (optional)
-```
-
-## 📚 Dependencies
+## Dependencies
 
 ### Core
 - Flask: Web framework
@@ -350,7 +330,7 @@ Docker Compose:
 ### Utilities
 - scipy: Statistical functions
 
-## 🎯 Design Principles
+##  Design Principles
 
 1. **Modularity**: Clear separation of concerns
 2. **Configurability**: All settings in config.py
@@ -359,7 +339,7 @@ Docker Compose:
 5. **Maintainability**: Clean code, documentation
 6. **Extensibility**: Easy to add new models/features
 
-## 🔮 Future Architecture Enhancements
+##  Future Architecture Enhancements
 
 1. **Microservices**: Split into separate services
 2. **Message Queue**: Async processing
